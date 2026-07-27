@@ -1,0 +1,162 @@
+[
+  {
+    "code": "01  ",
+    "name": "FAMILY TRIAGE SCREENING LIST (TUES-9:00)"
+  },
+  {
+    "code": "02  ",
+    "name": "CIVIL UNCONTESTED MOTIONS (10:00)"
+  },
+  {
+    "code": "05  ",
+    "name": "I.S.O. SCREENING LIST (TUES 11:00)"
+  },
+  {
+    "code": "05B ",
+    "name": "I.S.O. (TUE 2:00)"
+  },
+  {
+    "code": "05C ",
+    "name": "ISO CONTINUATIONS"
+  },
+  {
+    "code": "09  ",
+    "name": "CRIMINAL BAILS (MON/THURS)"
+  },
+  {
+    "code": "10  ",
+    "name": "MOTIONS TO EXPUNGE (TUES 8:30)"
+  },
+  {
+    "code": "11  ",
+    "name": "CRIMINAL UNCONTESTED MOTIONS(THURS-10:00)"
+  },
+  {
+    "code": "11A ",
+    "name": "SMALL CLAIMS WINNIPEG - CONTESTED (9:00AM)"
+  },
+  {
+    "code": "11P ",
+    "name": "SMALL CLAIMS WINNIPEG - CONTESTED (1:30PM)"
+  },
+  {
+    "code": "14  ",
+    "name": "ESTREATAL LIST (10:00)"
+  },
+  {
+    "code": "155 ",
+    "name": "ASSOCIATE JUDGES' UNCONT LIST (MON - FRI @ 9:30)"
+  },
+  {
+    "code": "1580",
+    "name": "SMALL CLAIMS WINNIPEG - MVA (THU 9AM)"
+  },
+  {
+    "code": "1581",
+    "name": "SMALL CLAIMS WINNIPEG - MVA (THU 10AM)"
+  },
+  {
+    "code": "1582",
+    "name": "SMALL CLAIMS WINNIPEG - MVA (THU 11AM)"
+  },
+  {
+    "code": "15A ",
+    "name": "SMALL CLAIMS WINNIPEG - THURS (1:30PM)"
+  },
+  {
+    "code": "15C ",
+    "name": "SMALL CLAIMS WINNIPEG - THURS (1:30PM)"
+  },
+  {
+    "code": "15D ",
+    "name": "SMALL CLAIMS WINNIPEG - THURS (1:30PM)"
+  },
+  {
+    "code": "163 ",
+    "name": "ASSOCIATE JUDGES' WITHOUT NOTICE (WED 2:00PM)"
+  },
+  {
+    "code": "16A ",
+    "name": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)"
+  },
+  {
+    "code": "16C ",
+    "name": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)"
+  },
+  {
+    "code": "16D ",
+    "name": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)"
+  },
+  {
+    "code": "18A ",
+    "name": "SMALL CLAIMS WINNIPEG - 1ST APP (1:30PM)"
+  },
+  {
+    "code": "18B ",
+    "name": "SMALL CLAIMS APPEAL RETURN"
+  },
+  {
+    "code": "18C ",
+    "name": "SMALL CLAIMS WINNIPEG - 1ST APP (1:30PM)"
+  },
+  {
+    "code": "18D ",
+    "name": "SMALL CLAIMS WINNIPEG - 1ST APP (1:30PM)"
+  },
+  {
+    "code": "19  ",
+    "name": "SMALL CLAIM APPEALS (10:00)"
+  },
+  {
+    "code": "20A ",
+    "name": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)"
+  },
+  {
+    "code": "20C ",
+    "name": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)"
+  },
+  {
+    "code": "20D ",
+    "name": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)"
+  },
+  {
+    "code": "25  ",
+    "name": "NOTICE TRUSTEE'S DISCHARGE (TUES-2:00)"
+  },
+  {
+    "code": "40  ",
+    "name": "BANKRUPTCY MOTIONS (TUE-2:00)"
+  },
+  {
+    "code": "40B ",
+    "name": "BANKRUPTCY UNCONTESTED DISCHARGE (WED-2:00)"
+  },
+  {
+    "code": "45  ",
+    "name": "FAMILY CONTESTED MOTIONS"
+  },
+  {
+    "code": "46  ",
+    "name": "CIVIL CONTESTED MOTIONS"
+  },
+  {
+    "code": "47  ",
+    "name": "CRIMINAL CONTESTED MATTERS"
+  },
+  {
+    "code": "553 ",
+    "name": "FAMILY TRIAGE LIST (MON 9:00)"
+  },
+  {
+    "code": "554 ",
+    "name": "FAMILY TRIAGE LIST (MON 1:00)"
+  },
+  {
+    "code": "66  ",
+    "name": "SUMMARY CONVICTION APPEALS-SET"
+  },
+  {
+    "code": "67  ",
+    "name": "ASSESSMENT OF COSTS HEARING"
+  }
+]
