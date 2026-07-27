@@ -349,7 +349,7 @@ def main():
             "registry_last_updated": reg_iso,
             "location": LOCATION_DESC,
             "counts": counts,
-            "results": [{k: v for k, v in r.items() if k != "url"} for r in results],
+            "results": results,
         }
         with open(os.path.join(DATA, "latest.json"), "w") as f:
             json.dump(summary, f, indent=2)
