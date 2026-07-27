@@ -1,6 +1,8 @@
 {
-  "run_id": "2026-07-27T0927",
-  "scraped_at": "2026-07-27T09:27:55.247320-05:00",
+  "run_id": "2026-07-27T1001",
+  "scraped_at": "2026-07-27T10:01:19.483866-05:00",
+  "registry_last_updated_raw": "Jul 27 2026 4:03:47",
+  "registry_last_updated": "2026-07-27T04:03:47-05:00",
   "location": "Winnipeg-KB",
   "counts": {
     "NO_DATES": 7,
