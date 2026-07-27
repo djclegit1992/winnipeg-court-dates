@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
 """
 Manitoba Court Registry - available court dates scraper (Winnipeg-KB).
-Version 5.
+Version 6.
 
-New in v5: a skip guard. The scraper now runs from two independent
-triggers, an external scheduler as the primary and GitHub's own cron
-half an hour behind it as a backup. If a scrape already happened in the
-last SKIP_IF_RECENT_MINUTES, this run exits quietly without touching the
-registry. That way the backup costs nothing when it isn't needed.
+New in v6: individual broken links are now noticed.
 
-Set the environment variable FORCE_RUN=1 to override the guard.
+Before this, a run was only flagged if more than a fifth of categories
+broke at once. Eight silent failures out of forty passed as healthy, so
+one hearing type could stop working for weeks without anyone knowing.
+
+Now every category's failures are counted across runs in
+data/health.json. A single timeout on a slow government server stays
+quiet, which is right, because that is ordinary noise. But a category
+that fails CONSECUTIVE_FAIL_LIMIT times in a row is named in the log and
+fails the run, so the scheduler emails you.
+
+latest.json also carries an "unreadable" list now, so the website can
+say "we could not check this one" instead of the false and more damaging
+"no dates available".
 
 What it writes, all inside a "data" folder:
 
@@ -18,16 +26,15 @@ What it writes, all inside a "data" folder:
   data/history.csv                one row per category per run, for trends
   data/latest.json                current state, for the website to read
   data/catalogue.json             the list of categories we know about
+  data/health.json                consecutive failure count per category
 
-Two safety rules are built in.
+Other safety rules, unchanged:
 
-First, a run that looks broken is still saved but is NOT promoted to
-latest.json, and the script exits with an error so the scheduler tells
-you. Seven categories with no dates is real. Forty is a bug.
+  A run that looks broken overall is still saved but is NOT promoted to
+  latest.json, so the website keeps showing the last good data.
 
-Second, the catalogue is compared every run. If the registry adds,
-removes, or renames a hearing type, the run is flagged so you find out
-the day it happens.
+  The catalogue is compared every run. If the registry adds, removes or
+  renames a hearing type, you find out the day it happens.
 
 Usage:
     pip install -r requirements.txt
@@ -68,10 +75,14 @@ MAX_ATTEMPTS = 3
 # If another run finished less than this many minutes ago, skip.
 SKIP_IF_RECENT_MINUTES = 20
 
+# How many runs in a row a single category must fail before we shout.
+# At five runs a day, three in a row is roughly half a day.
+CONSECUTIVE_FAIL_LIMIT = 3
+
 WINNIPEG = ZoneInfo("America/Winnipeg")
 DATA = "data"
 
-# A run must clear all of these to be published.
+# A run must clear all of these to be published at all.
 MIN_CATEGORIES = 30       # we currently expect 40
 MIN_OK_FRACTION = 0.50    # at least half must return real data
 MAX_BAD_FRACTION = 0.20   # at most a fifth may fail or mismatch
@@ -82,6 +93,9 @@ HEADERS = {
         "public court availability monitoring"
     )
 }
+
+BROKEN = ("FETCH_FAILED", "MISMATCH")
+
 
 # ---------------------------------------------------------------- helpers
 
@@ -182,7 +196,8 @@ def collect_links(session):
 
 def parse_page(html):
     soup = BeautifulSoup(html, "html.parser")
-    lines = [ln.strip() for ln in soup.get_text("\n").split("\n") if ln.strip()]
+    text = soup.get_text("\n")
+    lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
 
     hearing_on_page = ""
     for i, ln in enumerate(lines):
@@ -190,7 +205,7 @@ def parse_page(html):
             hearing_on_page = lines[i + 1]
             break
 
-    found = "not found" not in soup.get_text("\n").lower()
+    found = "not found" not in text.lower()
 
     rows = []
     for table in soup.find_all("table"):
@@ -242,6 +257,59 @@ def check_catalogue(results):
             json.dump(current_list, f, indent=2)
 
     return changes
+
+
+def update_health(results, now):
+    """
+    Count consecutive failures per category.
+
+    Returns (streaks, persistent) where streaks maps code to how many runs
+    in a row it has failed, and persistent lists the ones that have hit
+    the limit and deserve an email.
+    """
+    path = os.path.join(DATA, "health.json")
+
+    previous = {}
+    if os.path.exists(path):
+        try:
+            with open(path) as f:
+                previous = json.load(f)
+        except (ValueError, OSError):
+            previous = {}
+
+    streaks = {}
+    persistent = []
+
+    for r in results:
+        code = r["code"]
+        was = previous.get(code, {})
+        if r["status"] in BROKEN:
+            count = int(was.get("consecutive_failures", 0)) + 1
+            streaks[code] = {
+                "consecutive_failures": count,
+                "hearing_type": r["hearing_type"],
+                "last_status": r["status"],
+                "first_failed_at": was.get("first_failed_at") or now.isoformat(),
+                "last_failed_at": now.isoformat(),
+            }
+            if count >= CONSECUTIVE_FAIL_LIMIT:
+                persistent.append(
+                    f"{r['hearing_type']} ({code.strip()}) has failed "
+                    f"{count} runs in a row, {r['status']}"
+                )
+        else:
+            streaks[code] = {
+                "consecutive_failures": 0,
+                "hearing_type": r["hearing_type"],
+                "last_status": r["status"],
+                "last_ok_at": now.isoformat(),
+            }
+
+    os.makedirs(DATA, exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(streaks, f, indent=2)
+
+    return streaks, persistent
 
 
 # ---------------------------------------------------------------- main
@@ -322,7 +390,7 @@ def main():
                         "dates": [{"date": d, "time": t} for d, t in rows]})
         print(f"    -> {len(rows)} dates, earliest {earliest}")
 
-    # ------------------------------------------------------ health check
+    # ------------------------------------------------------ health checks
 
     total = len(results)
     counts = {}
@@ -332,6 +400,7 @@ def main():
     ok = counts.get("OK", 0)
     bad = counts.get("FETCH_FAILED", 0) + counts.get("MISMATCH", 0)
 
+    # Whole-run problems. These stop the data being published at all.
     problems = []
     if total < MIN_CATEGORIES:
         problems.append(f"only {total} categories found, expected at least {MIN_CATEGORIES}")
@@ -341,7 +410,13 @@ def main():
         problems.append(f"{bad} of {total} failed or mismatched")
 
     catalogue_changes = check_catalogue(results)
+    streaks, persistent = update_health(results, now)
     healthy = not problems
+
+    unreadable = [
+        {"code": r["code"], "hearing_type": r["hearing_type"], "status": r["status"]}
+        for r in results if r["status"] in BROKEN
+    ]
 
     run_record = {
         "run_id": tag,
@@ -352,6 +427,7 @@ def main():
         "healthy": healthy,
         "problems": problems,
         "catalogue_changes": catalogue_changes,
+        "persistent_failures": persistent,
         "counts": counts,
         "results": results,
     }
@@ -384,6 +460,7 @@ def main():
             "registry_last_updated": reg_iso,
             "location": LOCATION_DESC,
             "counts": counts,
+            "unreadable": unreadable,
             "results": results,
         }
         with open(os.path.join(DATA, "latest.json"), "w") as f:
@@ -395,10 +472,23 @@ def main():
     for status, n in sorted(counts.items()):
         print(f"  {status}: {n}")
 
+    if unreadable:
+        print(f"\n{len(unreadable)} could not be read this run:")
+        for u in unreadable:
+            streak = streaks.get(u["code"], {}).get("consecutive_failures", 1)
+            word = "run" if streak == 1 else "runs in a row"
+            print(f"  {u['hearing_type']} ({u['status']}), {streak} {word}")
+
     if catalogue_changes:
         print("\n*** THE REGISTRY CHANGED ITS CATEGORY LIST ***")
         for c in catalogue_changes:
             print(f"  {c}")
+
+    if persistent:
+        print("\n*** THESE CATEGORIES LOOK GENUINELY BROKEN ***")
+        for p in persistent:
+            print(f"  {p}")
+        print("  Open the link on the registry by hand and see what it does.")
 
     if healthy:
         print(f"\nRun looks good. Published to {DATA}/latest.json")
@@ -408,7 +498,7 @@ def main():
             print(f"  {p}")
 
     # A non-zero exit makes the scheduler send you an email.
-    if problems or catalogue_changes:
+    if problems or catalogue_changes or persistent:
         sys.exit(1)
 
 
