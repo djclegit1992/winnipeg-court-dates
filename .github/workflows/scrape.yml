@@ -27,6 +27,10 @@ on:
         description: "Scrape even if one just ran"
         type: boolean
         default: false
+      dry_run_alerts:
+        description: "Log which emails would go out, send nothing"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -71,6 +75,20 @@ jobs:
             git pull --rebase --autostash
             git push
           fi
+
+      # Only runs when the scrape was healthy. The script also refuses to
+      # act on a latest.json older than 90 minutes, so a failed scrape
+      # cannot trigger email based on a stale picture.
+      - name: Send alert emails
+        if: steps.scrape.outcome == 'success'
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          POSTMARK_TOKEN: ${{ secrets.POSTMARK_TOKEN }}
+          POSTMARK_FROM: ${{ secrets.POSTMARK_FROM }}
+          POSTMARK_STREAM: ${{ secrets.POSTMARK_STREAM }}
+          ALERTS_DRY_RUN: ${{ inputs.dry_run_alerts == true && '1' || '0' }}
+        run: python send_alerts.py
 
       # Tells the watchdog the pipeline is alive. If this ping stops
       # arriving, healthchecks.io emails you.
