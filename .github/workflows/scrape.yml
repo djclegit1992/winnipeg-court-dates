@@ -1,0 +1,61 @@
+name: Scrape Winnipeg court dates
+
+# Times are UTC. Winnipeg is UTC-5 in summer and UTC-6 in winter, so
+# these land an hour earlier once daylight saving ends in November.
+#   12:00 UTC = 07:00 Winnipeg (summer)
+#   17:00 UTC = 12:00 Winnipeg (summer)
+#   21:30 UTC = 16:30 Winnipeg (summer)
+on:
+  schedule:
+    - cron: "0 12 * * *"
+    - cron: "0 17 * * *"
+    - cron: "30 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install libraries
+        run: pip install -r requirements.txt
+
+      # continue-on-error means a bad scrape still gets saved below.
+      # The job is marked failed at the end so you get an email.
+      - name: Run the scraper
+        id: scrape
+        continue-on-error: true
+        run: python mb_court_dates.py
+
+      - name: Save the data
+        run: |
+          git config user.name "courtready-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "Nothing changed."
+          else
+            git commit -m "Data: ${{ github.run_id }}"
+            git pull --rebase --autostash
+            git push
+          fi
+
+      - name: Flag problems
+        if: steps.scrape.outcome == 'failure'
+        run: |
+          echo "The scraper reported a problem. Check the log above."
+          exit 1
