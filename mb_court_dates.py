@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """
 Manitoba Court Registry - available court dates scraper (Winnipeg-KB).
-Version 3. Built to run unattended on a schedule.
+Version 4.
+
+New in v4: reads the "Database last updated" timestamp off the Registry
+home page and stores it with every run. That tells us when the court's
+own data was refreshed, as distinct from when we looked at it. Both
+times go on the website.
 
 What it writes, all inside a "data" folder:
 
@@ -30,6 +35,7 @@ import csv
 import gzip
 import json
 import os
+import re
 import sys
 import time
 from datetime import datetime
@@ -45,6 +51,7 @@ from bs4 import BeautifulSoup
 CONTACT_EMAIL = "tom@courtready.ca"
 
 BASE = "https://web43.gov.mb.ca"
+REGISTRY_HOME = "https://web43.gov.mb.ca/Registry/"
 LOCATION_DESC = "Winnipeg-KB"
 LOCATION_URL = (
     "https://web43.gov.mb.ca/Registry/AvailableCourtDates/HearingTypeSelect"
@@ -95,6 +102,39 @@ def get(session, url):
             if attempt < MAX_ATTEMPTS:
                 time.sleep(DELAY_SECONDS * attempt)
     return None
+
+
+def read_registry_timestamp(session):
+    """
+    The Registry home page prints "Database last updated on <date time>".
+    That is when the court refreshed its data, which is not the same as
+    when we looked. Returns (raw_string, iso_string_or_None, html).
+    """
+    r = get(session, REGISTRY_HOME)
+    if r is None:
+        return None, None, ""
+
+    text = BeautifulSoup(r.text, "html.parser").get_text(" ")
+    text = " ".join(text.split())
+
+    m = re.search(
+        r"Database last updated on\s+"
+        r"([A-Za-z]{3,9}\s+\d{1,2}\s+\d{4}\s+\d{1,2}:\d{2}:\d{2})",
+        text,
+    )
+    if not m:
+        return None, None, r.text
+
+    raw = m.group(1)
+    iso = None
+    for fmt in ("%b %d %Y %H:%M:%S", "%B %d %Y %H:%M:%S"):
+        try:
+            iso = datetime.strptime(raw, fmt).replace(tzinfo=WINNIPEG).isoformat()
+            break
+        except ValueError:
+            continue
+
+    return raw, iso, r.text
 
 
 def collect_links(session):
@@ -188,11 +228,18 @@ def main():
     tag = now.strftime("%Y-%m-%dT%H%M")
 
     print(f"Run {tag} ({LOCATION_DESC})")
+
+    reg_raw, reg_iso, reg_html = read_registry_timestamp(session)
+    if reg_raw:
+        print(f"Registry says its database was last updated: {reg_raw}")
+    else:
+        print("Could not read the registry's own timestamp.")
+
     print("Reading the hearing type list...")
     links, list_html = collect_links(session)
     print(f"Found {len(links)} hearing types.\n")
 
-    raw_pages = {"__list__": list_html}
+    raw_pages = {"__home__": reg_html, "__list__": list_html}
     results = []
 
     for idx, (name, url) in enumerate(links, 1):
@@ -264,6 +311,8 @@ def main():
     run_record = {
         "run_id": tag,
         "scraped_at": now.isoformat(),
+        "registry_last_updated_raw": reg_raw,
+        "registry_last_updated": reg_iso,
         "location": LOCATION_DESC,
         "healthy": healthy,
         "problems": problems,
@@ -283,18 +332,21 @@ def main():
     with open(hist_path, "a", newline="") as f:
         w = csv.writer(f)
         if new_file:
-            w.writerow(["run_id", "scraped_at", "location", "code",
-                        "hearing_type", "status", "earliest_date",
-                        "days_out", "slots_total", "healthy"])
+            w.writerow(["run_id", "scraped_at", "registry_last_updated",
+                        "location", "code", "hearing_type", "status",
+                        "earliest_date", "days_out", "slots_total", "healthy"])
         for r in results:
-            w.writerow([tag, now.isoformat(), LOCATION_DESC, r["code"],
-                        r["hearing_type"], r["status"], r["earliest_date"],
-                        r["days_out"], r["slots_total"], healthy])
+            w.writerow([tag, now.isoformat(), reg_raw, LOCATION_DESC,
+                        r["code"], r["hearing_type"], r["status"],
+                        r["earliest_date"], r["days_out"], r["slots_total"],
+                        healthy])
 
     if healthy:
         summary = {
             "run_id": tag,
             "scraped_at": now.isoformat(),
+            "registry_last_updated_raw": reg_raw,
+            "registry_last_updated": reg_iso,
             "location": LOCATION_DESC,
             "counts": counts,
             "results": [{k: v for k, v in r.items() if k != "url"} for r in results],
