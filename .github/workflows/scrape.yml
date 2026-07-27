@@ -1,20 +1,32 @@
 name: Scrape Winnipeg court dates
 
-# Times are UTC. Winnipeg is UTC-5 in summer and UTC-6 in winter, so
-# these land an hour earlier once daylight saving ends in November.
+# The real schedule lives in cron-job.org, which calls this workflow
+# through the GitHub API. Those runs start immediately instead of
+# queueing behind GitHub's shared cron.
 #
-# The registry appears to refresh its own database around 4:00am
-# Winnipeg time, so the first run sits just after that.
+# The crons below are a backup only, set 30 minutes behind the real
+# schedule. If cron-job.org fired on time, the scraper sees a recent run
+# and exits in a few seconds without touching the registry.
 #
-#   10:30 UTC = 05:30 Winnipeg (summer)
-#   17:00 UTC = 12:00 Winnipeg (summer)
-#   21:30 UTC = 16:30 Winnipeg (summer)
+# Times are UTC and do not follow daylight saving. In summer:
+#   10:40 UTC = 05:40 Winnipeg
+#   14:40 UTC = 09:40 Winnipeg
+#   17:40 UTC = 12:40 Winnipeg
+#   20:40 UTC = 15:40 Winnipeg
+#   23:40 UTC = 18:40 Winnipeg
 on:
   schedule:
-    - cron: "30 10 * * *"
-    - cron: "0 17 * * *"
-    - cron: "30 21 * * *"
+    - cron: "40 10 * * *"
+    - cron: "40 14 * * *"
+    - cron: "40 17 * * *"
+    - cron: "40 20 * * *"
+    - cron: "40 23 * * *"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Scrape even if one just ran"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -43,6 +55,8 @@ jobs:
       - name: Run the scraper
         id: scrape
         continue-on-error: true
+        env:
+          FORCE_RUN: ${{ inputs.force }}
         run: python mb_court_dates.py
 
       - name: Save the data
@@ -56,6 +70,20 @@ jobs:
             git commit -m "Data: ${{ github.run_id }}"
             git pull --rebase --autostash
             git push
+          fi
+
+      # Tells the watchdog the pipeline is alive. If this ping stops
+      # arriving, healthchecks.io emails you.
+      - name: Ping the watchdog
+        if: steps.scrape.outcome == 'success'
+        env:
+          HC: ${{ secrets.HEALTHCHECK_URL }}
+        run: |
+          if [ -n "$HC" ]; then
+            curl -fsS -m 10 --retry 3 "$HC" > /dev/null
+            echo "Watchdog pinged."
+          else
+            echo "No HEALTHCHECK_URL secret set, skipping."
           fi
 
       - name: Flag problems
