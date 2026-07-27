@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """
 Manitoba Court Registry - available court dates scraper (Winnipeg-KB).
-Version 4.
+Version 5.
 
-New in v4: reads the "Database last updated" timestamp off the Registry
-home page and stores it with every run. That tells us when the court's
-own data was refreshed, as distinct from when we looked at it. Both
-times go on the website.
+New in v5: a skip guard. The scraper now runs from two independent
+triggers, an external scheduler as the primary and GitHub's own cron
+half an hour behind it as a backup. If a scrape already happened in the
+last SKIP_IF_RECENT_MINUTES, this run exits quietly without touching the
+registry. That way the backup costs nothing when it isn't needed.
+
+Set the environment variable FORCE_RUN=1 to override the guard.
 
 What it writes, all inside a "data" folder:
 
@@ -62,6 +65,9 @@ DELAY_SECONDS = 2.0
 TIMEOUT_SECONDS = 45
 MAX_ATTEMPTS = 3
 
+# If another run finished less than this many minutes ago, skip.
+SKIP_IF_RECENT_MINUTES = 20
+
 WINNIPEG = ZoneInfo("America/Winnipeg")
 DATA = "data"
 
@@ -91,6 +97,31 @@ def code_from_url(url):
     return q.get("HearingTypeCode", [""])[0]
 
 
+def forced():
+    return os.environ.get("FORCE_RUN", "").strip().lower() in ("1", "true", "yes")
+
+
+def minutes_since_last_run(now):
+    """How long ago the previous run finished, in minutes. None if never."""
+    folder = os.path.join(DATA, "runs")
+    if not os.path.isdir(folder):
+        return None
+
+    stamps = []
+    for fn in os.listdir(folder):
+        if not fn.endswith(".json.gz"):
+            continue
+        try:
+            t = datetime.strptime(fn[:-8], "%Y-%m-%dT%H%M")
+        except ValueError:
+            continue
+        stamps.append(t.replace(tzinfo=WINNIPEG))
+
+    if not stamps:
+        return None
+    return (now - max(stamps)).total_seconds() / 60.0
+
+
 def get(session, url):
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
@@ -114,8 +145,7 @@ def read_registry_timestamp(session):
     if r is None:
         return None, None, ""
 
-    text = BeautifulSoup(r.text, "html.parser").get_text(" ")
-    text = " ".join(text.split())
+    text = " ".join(BeautifulSoup(r.text, "html.parser").get_text(" ").split())
 
     m = re.search(
         r"Database last updated on\s+"
@@ -152,8 +182,7 @@ def collect_links(session):
 
 def parse_page(html):
     soup = BeautifulSoup(html, "html.parser")
-    text = soup.get_text("\n")
-    lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
+    lines = [ln.strip() for ln in soup.get_text("\n").split("\n") if ln.strip()]
 
     hearing_on_page = ""
     for i, ln in enumerate(lines):
@@ -161,7 +190,7 @@ def parse_page(html):
             hearing_on_page = lines[i + 1]
             break
 
-    found = "not found" not in text.lower()
+    found = "not found" not in soup.get_text("\n").lower()
 
     rows = []
     for table in soup.find_all("table"):
@@ -202,13 +231,10 @@ def check_catalogue(results):
     with open(path) as f:
         previous = {(d["code"], d["name"]) for d in json.load(f)}
 
-    added = sorted(set(current) - previous)
-    removed = sorted(previous - set(current))
-
     changes = []
-    for c, n in added:
+    for c, n in sorted(set(current) - previous):
         changes.append(f"NEW category: {c} {n}")
-    for c, n in removed:
+    for c, n in sorted(previous - set(current)):
         changes.append(f"GONE category: {c} {n}")
 
     if changes:
@@ -222,11 +248,20 @@ def check_catalogue(results):
 
 
 def main():
-    session = requests.Session()
     now = datetime.now(WINNIPEG)
     today = now.date()
     tag = now.strftime("%Y-%m-%dT%H%M")
 
+    # Skip guard. The backup trigger runs behind the primary one, so most
+    # of the time it has nothing to do.
+    if not forced():
+        gap = minutes_since_last_run(now)
+        if gap is not None and gap >= 0 and gap < SKIP_IF_RECENT_MINUTES:
+            print(f"A scrape finished {gap:.0f} minutes ago. Nothing to do.")
+            print("Set FORCE_RUN=1 to override.")
+            return
+
+    session = requests.Session()
     print(f"Run {tag} ({LOCATION_DESC})")
 
     reg_raw, reg_iso, reg_html = read_registry_timestamp(session)
