@@ -2,12 +2,16 @@ name: Scrape Winnipeg court dates
 
 # Times are UTC. Winnipeg is UTC-5 in summer and UTC-6 in winter, so
 # these land an hour earlier once daylight saving ends in November.
-#   12:00 UTC = 07:00 Winnipeg (summer)
+#
+# The registry appears to refresh its own database around 4:00am
+# Winnipeg time, so the first run sits just after that.
+#
+#   10:30 UTC = 05:30 Winnipeg (summer)
 #   17:00 UTC = 12:00 Winnipeg (summer)
 #   21:30 UTC = 16:30 Winnipeg (summer)
 on:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "30 10 * * *"
     - cron: "0 17 * * *"
     - cron: "30 21 * * *"
   workflow_dispatch:
