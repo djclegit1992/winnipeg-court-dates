@@ -1,8 +1,8 @@
 {
-  "run_id": "2026-07-30T0257",
-  "scraped_at": "2026-07-30T02:57:49.034058-05:00",
-  "registry_last_updated_raw": "Jul 29 2026 4:06:18",
-  "registry_last_updated": "2026-07-29T04:06:18-05:00",
+  "run_id": "2026-07-30T0510",
+  "scraped_at": "2026-07-30T05:10:23.532544-05:00",
+  "registry_last_updated_raw": "Jul 30 2026 4:05:00",
+  "registry_last_updated": "2026-07-30T04:05:00-05:00",
   "location": "Winnipeg-KB",
   "counts": {
     "NO_DATES": 7,
@@ -26,7 +26,7 @@
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=155%20&HearingTypeDesc=ASSOCIATE%20JUDGES'%20UNCONT%20LIST%20(MON%20-%20FRI%20%40%209%3A30)",
       "earliest_date": "06-Aug-2026",
       "days_out": 7,
-      "slots_total": 92,
+      "slots_total": 91,
       "dates": [
         {
           "date": "06-Aug-2026",
@@ -38,10 +38,6 @@
         },
         {
           "date": "10-Aug-2026",
-          "time": "09:30"
-        },
-        {
-          "date": "11-Aug-2026",
           "time": "09:30"
         },
         {
@@ -2752,14 +2748,10 @@
       "code": "16D ",
       "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=16D%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%201ST%20APP%20%20(9%3A00AM)%20",
-      "earliest_date": "26-Oct-2026",
-      "days_out": 88,
-      "slots_total": 9,
+      "earliest_date": "02-Nov-2026",
+      "days_out": 95,
+      "slots_total": 8,
       "dates": [
-        {
-          "date": "26-Oct-2026",
-          "time": "09:00"
-        },
         {
           "date": "02-Nov-2026",
           "time": "09:00"
