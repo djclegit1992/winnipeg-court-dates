@@ -1,8 +1,8 @@
 {
-  "run_id": "2026-08-01T0252",
-  "scraped_at": "2026-08-01T02:52:42.598213-05:00",
-  "registry_last_updated_raw": "Jul 31 2026 4:08:53",
-  "registry_last_updated": "2026-07-31T04:08:53-05:00",
+  "run_id": "2026-08-01T0510",
+  "scraped_at": "2026-08-01T05:10:21.862794-05:00",
+  "registry_last_updated_raw": "Aug 1 2026 4:03:44",
+  "registry_last_updated": "2026-08-01T04:03:44-05:00",
   "location": "Winnipeg-KB",
   "counts": {
     "NO_DATES": 7,
@@ -24,18 +24,10 @@
       "code": "155 ",
       "hearing_type": "ASSOCIATE JUDGES' UNCONT LIST (MON - FRI @ 9:30)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=155%20&HearingTypeDesc=ASSOCIATE%20JUDGES'%20UNCONT%20LIST%20(MON%20-%20FRI%20%40%209%3A30)",
-      "earliest_date": "10-Aug-2026",
-      "days_out": 9,
-      "slots_total": 88,
+      "earliest_date": "14-Aug-2026",
+      "days_out": 13,
+      "slots_total": 86,
       "dates": [
-        {
-          "date": "10-Aug-2026",
-          "time": "09:30"
-        },
-        {
-          "date": "12-Aug-2026",
-          "time": "09:30"
-        },
         {
           "date": "14-Aug-2026",
           "time": "09:30"
@@ -601,7 +593,7 @@
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=02%20%20&HearingTypeDesc=CIVIL%20UNCONTESTED%20MOTIONS%20(10%3A00)",
       "earliest_date": "07-Aug-2026",
       "days_out": 6,
-      "slots_total": 77,
+      "slots_total": 76,
       "dates": [
         {
           "date": "07-Aug-2026",
@@ -617,10 +609,6 @@
         },
         {
           "date": "19-Aug-2026",
-          "time": "10:00"
-        },
-        {
-          "date": "21-Aug-2026",
           "time": "10:00"
         },
         {
@@ -918,14 +906,10 @@
       "code": "09  ",
       "hearing_type": "CRIMINAL BAILS (MON/THURS)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=09%20%20&HearingTypeDesc=CRIMINAL%20BAILS%20(MON%2FTHURS)",
-      "earliest_date": "04-Aug-2026",
-      "days_out": 3,
-      "slots_total": 137,
+      "earliest_date": "06-Aug-2026",
+      "days_out": 5,
+      "slots_total": 136,
       "dates": [
-        {
-          "date": "04-Aug-2026",
-          "time": "14:00"
-        },
         {
           "date": "06-Aug-2026",
           "time": "10:00"
