@@ -1,18 +1,18 @@
 {
-  "run_id": "2026-08-03T1510",
-  "scraped_at": "2026-08-03T15:10:18.162095-05:00",
+  "run_id": "2026-08-03T1646",
+  "scraped_at": "2026-08-03T16:46:05.833215-05:00",
   "registry_last_updated_raw": "Aug 3 2026 4:04:32",
   "registry_last_updated": "2026-08-03T04:04:32-05:00",
   "location": "Winnipeg-KB",
   "counts": {
-    "NO_DATES": 7,
-    "OK": 32,
+    "NO_DATES": 6,
+    "OK": 33,
     "FETCH_FAILED": 1
   },
   "unreadable": [
     {
-      "code": "40B ",
-      "hearing_type": "BANKRUPTCY UNCONTESTED DISCHARGE (WED-2:00)",
+      "code": "47  ",
+      "hearing_type": "CRIMINAL CONTESTED MATTERS",
       "status": "FETCH_FAILED"
     }
   ],
@@ -540,11 +540,32 @@
       "code": "40B ",
       "hearing_type": "BANKRUPTCY UNCONTESTED DISCHARGE (WED-2:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=40B%20&HearingTypeDesc=BANKRUPTCY%20UNCONTESTED%20DISCHARGE%20(WED-2%3A00)",
-      "earliest_date": null,
-      "days_out": null,
-      "slots_total": null,
-      "dates": [],
-      "status": "FETCH_FAILED"
+      "earliest_date": "05-Aug-2026",
+      "days_out": 2,
+      "slots_total": 5,
+      "dates": [
+        {
+          "date": "05-Aug-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "02-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "07-Oct-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "04-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "02-Dec-2026",
+          "time": "14:00"
+        }
+      ],
+      "status": "OK"
     },
     {
       "code": "46  ",
@@ -1449,9 +1470,9 @@
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=47%20%20&HearingTypeDesc=CRIMINAL%20CONTESTED%20MATTERS",
       "earliest_date": null,
       "days_out": null,
-      "slots_total": 0,
+      "slots_total": null,
       "dates": [],
-      "status": "NO_DATES"
+      "status": "FETCH_FAILED"
     },
     {
       "code": "11  ",
