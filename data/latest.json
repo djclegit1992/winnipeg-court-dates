@@ -1,6 +1,6 @@
 {
-  "run_id": "2026-08-03T1210",
-  "scraped_at": "2026-08-03T12:10:25.635556-05:00",
+  "run_id": "2026-08-03T1510",
+  "scraped_at": "2026-08-03T15:10:18.162095-05:00",
   "registry_last_updated_raw": "Aug 3 2026 4:04:32",
   "registry_last_updated": "2026-08-03T04:04:32-05:00",
   "location": "Winnipeg-KB",
@@ -11,8 +11,8 @@
   },
   "unreadable": [
     {
-      "code": "1582",
-      "hearing_type": "SMALL CLAIMS WINNIPEG - MVA (THU 11AM)",
+      "code": "40B ",
+      "hearing_type": "BANKRUPTCY UNCONTESTED DISCHARGE (WED-2:00)",
       "status": "FETCH_FAILED"
     }
   ],
@@ -540,32 +540,11 @@
       "code": "40B ",
       "hearing_type": "BANKRUPTCY UNCONTESTED DISCHARGE (WED-2:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=40B%20&HearingTypeDesc=BANKRUPTCY%20UNCONTESTED%20DISCHARGE%20(WED-2%3A00)",
-      "earliest_date": "05-Aug-2026",
-      "days_out": 2,
-      "slots_total": 5,
-      "dates": [
-        {
-          "date": "05-Aug-2026",
-          "time": "14:00"
-        },
-        {
-          "date": "02-Sep-2026",
-          "time": "14:00"
-        },
-        {
-          "date": "07-Oct-2026",
-          "time": "14:00"
-        },
-        {
-          "date": "04-Nov-2026",
-          "time": "14:00"
-        },
-        {
-          "date": "02-Dec-2026",
-          "time": "14:00"
-        }
-      ],
-      "status": "OK"
+      "earliest_date": null,
+      "days_out": null,
+      "slots_total": null,
+      "dates": [],
+      "status": "FETCH_FAILED"
     },
     {
       "code": "46  ",
@@ -3100,11 +3079,20 @@
       "code": "1582",
       "hearing_type": "SMALL CLAIMS WINNIPEG - MVA (THU 11AM)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=1582&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%20MVA%20(THU%2011AM)",
-      "earliest_date": null,
-      "days_out": null,
-      "slots_total": null,
-      "dates": [],
-      "status": "FETCH_FAILED"
+      "earliest_date": "03-Dec-2026",
+      "days_out": 122,
+      "slots_total": 2,
+      "dates": [
+        {
+          "date": "03-Dec-2026",
+          "time": "11:00"
+        },
+        {
+          "date": "14-Jan-2027",
+          "time": "11:00"
+        }
+      ],
+      "status": "OK"
     },
     {
       "code": "1580",
