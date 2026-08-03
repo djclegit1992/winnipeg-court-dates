@@ -1,21 +1,14 @@
 {
-  "run_id": "2026-08-03T1646",
-  "scraped_at": "2026-08-03T16:46:05.833215-05:00",
+  "run_id": "2026-08-03T1810",
+  "scraped_at": "2026-08-03T18:10:18.724432-05:00",
   "registry_last_updated_raw": "Aug 3 2026 4:04:32",
   "registry_last_updated": "2026-08-03T04:04:32-05:00",
   "location": "Winnipeg-KB",
   "counts": {
-    "NO_DATES": 6,
-    "OK": 33,
-    "FETCH_FAILED": 1
+    "NO_DATES": 7,
+    "OK": 33
   },
-  "unreadable": [
-    {
-      "code": "47  ",
-      "hearing_type": "CRIMINAL CONTESTED MATTERS",
-      "status": "FETCH_FAILED"
-    }
-  ],
+  "unreadable": [],
   "results": [
     {
       "code": "67  ",
@@ -1470,9 +1463,9 @@
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=47%20%20&HearingTypeDesc=CRIMINAL%20CONTESTED%20MATTERS",
       "earliest_date": null,
       "days_out": null,
-      "slots_total": null,
+      "slots_total": 0,
       "dates": [],
-      "status": "FETCH_FAILED"
+      "status": "NO_DATES"
     },
     {
       "code": "11  ",
