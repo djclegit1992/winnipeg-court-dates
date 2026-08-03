@@ -1,14 +1,21 @@
 {
-  "run_id": "2026-08-03T0737",
-  "scraped_at": "2026-08-03T07:37:42.136174-05:00",
+  "run_id": "2026-08-03T0910",
+  "scraped_at": "2026-08-03T09:10:20.111239-05:00",
   "registry_last_updated_raw": "Aug 3 2026 4:04:32",
   "registry_last_updated": "2026-08-03T04:04:32-05:00",
   "location": "Winnipeg-KB",
   "counts": {
     "NO_DATES": 7,
-    "OK": 33
+    "OK": 32,
+    "FETCH_FAILED": 1
   },
-  "unreadable": [],
+  "unreadable": [
+    {
+      "code": "16A ",
+      "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)",
+      "status": "FETCH_FAILED"
+    }
+  ],
   "results": [
     {
       "code": "67  ",
@@ -2626,52 +2633,11 @@
       "code": "16A ",
       "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=16A%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%201ST%20APP%20%20(9%3A00AM)%20",
-      "earliest_date": "02-Nov-2026",
-      "days_out": 91,
-      "slots_total": 10,
-      "dates": [
-        {
-          "date": "02-Nov-2026",
-          "time": "09:00"
-        },
-        {
-          "date": "23-Nov-2026",
-          "time": "09:00"
-        },
-        {
-          "date": "30-Nov-2026",
-          "time": "09:00"
-        },
-        {
-          "date": "07-Dec-2026",
-          "time": "09:00"
-        },
-        {
-          "date": "14-Dec-2026",
-          "time": "09:00"
-        },
-        {
-          "date": "21-Dec-2026",
-          "time": "09:00"
-        },
-        {
-          "date": "04-Jan-2027",
-          "time": "09:00"
-        },
-        {
-          "date": "11-Jan-2027",
-          "time": "09:00"
-        },
-        {
-          "date": "18-Jan-2027",
-          "time": "09:00"
-        },
-        {
-          "date": "25-Jan-2027",
-          "time": "09:00"
-        }
-      ],
-      "status": "OK"
+      "earliest_date": null,
+      "days_out": null,
+      "slots_total": null,
+      "dates": [],
+      "status": "FETCH_FAILED"
     },
     {
       "code": "16C ",
