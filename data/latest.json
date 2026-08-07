@@ -1,8 +1,8 @@
 {
-  "run_id": "2026-08-07T0025",
-  "scraped_at": "2026-08-07T00:25:20.469168-05:00",
-  "registry_last_updated_raw": "Aug 6 2026 4:06:00",
-  "registry_last_updated": "2026-08-06T04:06:00-05:00",
+  "run_id": "2026-08-07T0510",
+  "scraped_at": "2026-08-07T05:10:21.526107-05:00",
+  "registry_last_updated_raw": "Aug 7 2026 4:06:42",
+  "registry_last_updated": "2026-08-07T04:06:42-05:00",
   "location": "Winnipeg-KB",
   "counts": {
     "NO_DATES": 6,
@@ -24,14 +24,10 @@
       "code": "155 ",
       "hearing_type": "ASSOCIATE JUDGES' UNCONT LIST (MON - FRI @ 9:30)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=155%20&HearingTypeDesc=ASSOCIATE%20JUDGES'%20UNCONT%20LIST%20(MON%20-%20FRI%20%40%209%3A30)",
-      "earliest_date": "17-Aug-2026",
-      "days_out": 10,
-      "slots_total": 86,
+      "earliest_date": "18-Aug-2026",
+      "days_out": 11,
+      "slots_total": 85,
       "dates": [
-        {
-          "date": "17-Aug-2026",
-          "time": "09:30"
-        },
         {
           "date": "18-Aug-2026",
           "time": "09:30"
@@ -2307,12 +2303,12 @@
       "code": "01  ",
       "hearing_type": "FAMILY TRIAGE SCREENING LIST (TUES-9:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=01%20%20&HearingTypeDesc=FAMILY%20TRIAGE%20SCREENING%20LIST%20(TUES-9%3A00)",
-      "earliest_date": "18-Aug-2026",
-      "days_out": 11,
+      "earliest_date": "25-Aug-2026",
+      "days_out": 18,
       "slots_total": 18,
       "dates": [
         {
-          "date": "18-Aug-2026",
+          "date": "25-Aug-2026",
           "time": "9:00"
         },
         {
@@ -2966,7 +2962,7 @@
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=11A%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%20CONTESTED%20(9%3A00AM)",
       "earliest_date": "22-Dec-2026",
       "days_out": 137,
-      "slots_total": 13,
+      "slots_total": 14,
       "dates": [
         {
           "date": "22-Dec-2026",
@@ -2986,6 +2982,10 @@
         },
         {
           "date": "06-Jan-2027",
+          "time": "09:00"
+        },
+        {
+          "date": "07-Jan-2027",
           "time": "09:00"
         },
         {
