@@ -1,8 +1,8 @@
 {
-  "run_id": "2026-08-10T0009",
-  "scraped_at": "2026-08-10T00:09:51.270303-05:00",
-  "registry_last_updated_raw": "Aug 9 2026 4:04:18",
-  "registry_last_updated": "2026-08-09T04:04:18-05:00",
+  "run_id": "2026-08-10T0510",
+  "scraped_at": "2026-08-10T05:10:23.357083-05:00",
+  "registry_last_updated_raw": "Aug 10 2026 4:05:19",
+  "registry_last_updated": "2026-08-10T04:05:19-05:00",
   "location": "Winnipeg-KB",
   "counts": {
     "NO_DATES": 6,
