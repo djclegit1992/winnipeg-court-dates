@@ -3,240 +3,240 @@
     "consecutive_failures": 0,
     "hearing_type": "ASSESSMENT OF COSTS HEARING",
     "last_status": "NO_DATES",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "155 ": {
     "consecutive_failures": 0,
     "hearing_type": "ASSOCIATE JUDGES' UNCONT LIST (MON - FRI @ 9:30)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "163 ": {
     "consecutive_failures": 0,
     "hearing_type": "ASSOCIATE JUDGES' WITHOUT NOTICE (WED 2:00PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "40  ": {
     "consecutive_failures": 0,
     "hearing_type": "BANKRUPTCY MOTIONS (TUE-2:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "40B ": {
     "consecutive_failures": 0,
     "hearing_type": "BANKRUPTCY UNCONTESTED DISCHARGE (WED-2:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "46  ": {
     "consecutive_failures": 0,
     "hearing_type": "CIVIL CONTESTED MOTIONS",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "02  ": {
     "consecutive_failures": 0,
     "hearing_type": "CIVIL UNCONTESTED MOTIONS (10:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "09  ": {
     "consecutive_failures": 0,
     "hearing_type": "CRIMINAL BAILS (MON/THURS)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "47  ": {
     "consecutive_failures": 0,
     "hearing_type": "CRIMINAL CONTESTED MATTERS",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "11  ": {
     "consecutive_failures": 0,
     "hearing_type": "CRIMINAL UNCONTESTED MOTIONS(THURS-10:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "14  ": {
     "consecutive_failures": 0,
     "hearing_type": "ESTREATAL LIST (10:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "45  ": {
     "consecutive_failures": 0,
     "hearing_type": "FAMILY CONTESTED MOTIONS",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "554 ": {
     "consecutive_failures": 0,
     "hearing_type": "FAMILY TRIAGE LIST (MON 1:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "553 ": {
     "consecutive_failures": 0,
     "hearing_type": "FAMILY TRIAGE LIST (MON 9:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "01  ": {
     "consecutive_failures": 0,
     "hearing_type": "FAMILY TRIAGE SCREENING LIST (TUES-9:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "05B ": {
     "consecutive_failures": 0,
     "hearing_type": "I.S.O. (TUE 2:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "05  ": {
     "consecutive_failures": 0,
     "hearing_type": "I.S.O. SCREENING LIST (TUES 11:00)",
     "last_status": "NO_DATES",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "05C ": {
     "consecutive_failures": 0,
     "hearing_type": "ISO CONTINUATIONS",
     "last_status": "NO_DATES",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "10  ": {
     "consecutive_failures": 0,
     "hearing_type": "MOTIONS TO EXPUNGE (TUES 8:30)",
     "last_status": "NO_DATES",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "25  ": {
     "consecutive_failures": 0,
     "hearing_type": "NOTICE TRUSTEE'S DISCHARGE (TUES-2:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "19  ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIM APPEALS (10:00)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "18B ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS APPEAL RETURN",
     "last_status": "NO_DATES",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "16A ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "16C ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "16D ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "18A ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (1:30PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "18C ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (1:30PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "18D ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (1:30PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "11P ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - CONTESTED (1:30PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "11A ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - CONTESTED (9:00AM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "1581": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - MVA (THU 10AM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "1582": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - MVA (THU 11AM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "1580": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - MVA (THU 9AM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "20A ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "20C ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "20D ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "15A ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - THURS (1:30PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "15C ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - THURS (1:30PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "15D ": {
     "consecutive_failures": 0,
     "hearing_type": "SMALL CLAIMS WINNIPEG - THURS (1:30PM)",
     "last_status": "OK",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   },
   "66  ": {
     "consecutive_failures": 0,
     "hearing_type": "SUMMARY CONVICTION APPEALS-SET",
     "last_status": "NO_DATES",
-    "last_ok_at": "2026-08-13T06:25:23.423300-05:00"
+    "last_ok_at": "2026-08-13T09:10:21.490274-05:00"
   }
 }
