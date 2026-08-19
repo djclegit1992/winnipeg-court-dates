@@ -1,41 +1,14 @@
 {
-  "run_id": "2026-08-19T1004",
-  "scraped_at": "2026-08-19T10:04:46.685461-05:00",
+  "run_id": "2026-08-19T1210",
+  "scraped_at": "2026-08-19T12:10:21.036620-05:00",
   "registry_last_updated_raw": "Aug 19 2026 4:04:19",
   "registry_last_updated": "2026-08-19T04:04:19-05:00",
   "location": "Winnipeg-KB",
   "counts": {
-    "FETCH_FAILED": 5,
-    "OK": 30,
-    "NO_DATES": 5
+    "NO_DATES": 6,
+    "OK": 34
   },
-  "unreadable": [
-    {
-      "code": "67  ",
-      "hearing_type": "ASSESSMENT OF COSTS HEARING",
-      "status": "FETCH_FAILED"
-    },
-    {
-      "code": "09  ",
-      "hearing_type": "CRIMINAL BAILS (MON/THURS)",
-      "status": "FETCH_FAILED"
-    },
-    {
-      "code": "25  ",
-      "hearing_type": "NOTICE TRUSTEE'S DISCHARGE (TUES-2:00)",
-      "status": "FETCH_FAILED"
-    },
-    {
-      "code": "20A ",
-      "hearing_type": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)",
-      "status": "FETCH_FAILED"
-    },
-    {
-      "code": "20D ",
-      "hearing_type": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)",
-      "status": "FETCH_FAILED"
-    }
-  ],
+  "unreadable": [],
   "results": [
     {
       "code": "67  ",
@@ -43,9 +16,9 @@
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=67%20%20&HearingTypeDesc=ASSESSMENT%20OF%20COSTS%20HEARING",
       "earliest_date": null,
       "days_out": null,
-      "slots_total": null,
+      "slots_total": 0,
       "dates": [],
-      "status": "FETCH_FAILED"
+      "status": "NO_DATES"
     },
     {
       "code": "155 ",
@@ -1153,11 +1126,536 @@
       "code": "09  ",
       "hearing_type": "CRIMINAL BAILS (MON/THURS)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=09%20%20&HearingTypeDesc=CRIMINAL%20BAILS%20(MON%2FTHURS)",
-      "earliest_date": null,
-      "days_out": null,
-      "slots_total": null,
-      "dates": [],
-      "status": "FETCH_FAILED"
+      "earliest_date": "24-Aug-2026",
+      "days_out": 5,
+      "slots_total": 131,
+      "dates": [
+        {
+          "date": "24-Aug-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "27-Aug-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "31-Aug-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "03-Sep-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "08-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "10-Sep-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "14-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "17-Sep-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "21-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "24-Sep-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "28-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "01-Oct-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "05-Oct-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "08-Oct-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "13-Oct-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "15-Oct-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "19-Oct-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "22-Oct-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "26-Oct-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "29-Oct-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "02-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "05-Nov-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "09-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "12-Nov-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "16-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "19-Nov-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "23-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "26-Nov-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "30-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "03-Dec-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "07-Dec-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "10-Dec-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "14-Dec-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "17-Dec-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "04-Jan-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "07-Jan-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "11-Jan-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "14-Jan-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "18-Jan-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "21-Jan-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "25-Jan-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "28-Jan-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "01-Feb-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "04-Feb-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "08-Feb-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "11-Feb-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "16-Feb-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "18-Feb-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "22-Feb-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "25-Feb-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "01-Mar-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "04-Mar-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "08-Mar-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "11-Mar-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "15-Mar-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "18-Mar-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "22-Mar-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "25-Mar-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "30-Mar-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "01-Apr-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "05-Apr-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "08-Apr-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "12-Apr-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "15-Apr-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "19-Apr-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "22-Apr-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "26-Apr-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "29-Apr-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "03-May-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "06-May-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "10-May-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "13-May-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "17-May-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "20-May-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "25-May-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "27-May-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "31-May-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "03-Jun-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "07-Jun-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "10-Jun-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "14-Jun-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "17-Jun-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "21-Jun-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "24-Jun-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "28-Jun-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "05-Jul-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "08-Jul-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "12-Jul-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "15-Jul-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "19-Jul-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "22-Jul-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "26-Jul-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "29-Jul-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "03-Aug-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "05-Aug-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "09-Aug-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "12-Aug-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "16-Aug-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "19-Aug-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "23-Aug-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "26-Aug-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "30-Aug-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "02-Sep-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "07-Sep-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "09-Sep-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "13-Sep-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "16-Sep-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "20-Sep-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "23-Sep-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "27-Sep-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "04-Oct-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "07-Oct-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "12-Oct-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "14-Oct-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "18-Oct-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "21-Oct-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "25-Oct-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "28-Oct-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "01-Nov-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "04-Nov-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "08-Nov-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "15-Nov-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "18-Nov-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "22-Nov-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "25-Nov-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "29-Nov-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "02-Dec-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "06-Dec-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "09-Dec-2027",
+          "time": "10:00"
+        },
+        {
+          "date": "13-Dec-2027",
+          "time": "14:00"
+        },
+        {
+          "date": "16-Dec-2027",
+          "time": "10:00"
+        }
+      ],
+      "status": "OK"
     },
     {
       "code": "47  ",
@@ -2101,11 +2599,88 @@
       "code": "25  ",
       "hearing_type": "NOTICE TRUSTEE'S DISCHARGE (TUES-2:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=25%20%20&HearingTypeDesc=NOTICE%20TRUSTEE'S%20DISCHARGE%20(TUES-2%3A00)",
-      "earliest_date": null,
-      "days_out": null,
-      "slots_total": null,
-      "dates": [],
-      "status": "FETCH_FAILED"
+      "earliest_date": "25-Aug-2026",
+      "days_out": 6,
+      "slots_total": 19,
+      "dates": [
+        {
+          "date": "25-Aug-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "01-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "08-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "15-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "22-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "29-Sep-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "06-Oct-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "13-Oct-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "20-Oct-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "27-Oct-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "03-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "10-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "17-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "24-Nov-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "01-Dec-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "08-Dec-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "15-Dec-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "22-Dec-2026",
+          "time": "14:00"
+        },
+        {
+          "date": "29-Dec-2026",
+          "time": "14:00"
+        }
+      ],
+      "status": "OK"
     },
     {
       "code": "19  ",
@@ -2593,11 +3168,32 @@
       "code": "20A ",
       "hearing_type": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=20A%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%20SET%20ASIDE%20(PM)",
-      "earliest_date": null,
-      "days_out": null,
-      "slots_total": null,
-      "dates": [],
-      "status": "FETCH_FAILED"
+      "earliest_date": "28-Sep-2026",
+      "days_out": 40,
+      "slots_total": 5,
+      "dates": [
+        {
+          "date": "28-Sep-2026",
+          "time": "01:30"
+        },
+        {
+          "date": "26-Oct-2026",
+          "time": "01:30"
+        },
+        {
+          "date": "30-Nov-2026",
+          "time": "01:30"
+        },
+        {
+          "date": "21-Dec-2026",
+          "time": "01:30"
+        },
+        {
+          "date": "25-Jan-2027",
+          "time": "01:30"
+        }
+      ],
+      "status": "OK"
     },
     {
       "code": "20C ",
@@ -2638,11 +3234,32 @@
       "code": "20D ",
       "hearing_type": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=20D%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%20SET%20ASIDE%20(PM)",
-      "earliest_date": null,
-      "days_out": null,
-      "slots_total": null,
-      "dates": [],
-      "status": "FETCH_FAILED"
+      "earliest_date": "28-Sep-2026",
+      "days_out": 40,
+      "slots_total": 5,
+      "dates": [
+        {
+          "date": "28-Sep-2026",
+          "time": "01:30"
+        },
+        {
+          "date": "26-Oct-2026",
+          "time": "01:30"
+        },
+        {
+          "date": "30-Nov-2026",
+          "time": "01:30"
+        },
+        {
+          "date": "21-Dec-2026",
+          "time": "01:30"
+        },
+        {
+          "date": "25-Jan-2027",
+          "time": "01:30"
+        }
+      ],
+      "status": "OK"
     },
     {
       "code": "15A ",
