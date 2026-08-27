@@ -4,6 +4,10 @@
     "name": "FAMILY TRIAGE SCREENING LIST (TUES-9:00)"
   },
   {
+    "code": "01FR",
+    "name": "FAMILY TRIAGE SCREENING LIST - FRENCH (TUES)"
+  },
+  {
     "code": "02  ",
     "name": "CIVIL UNCONTESTED MOTIONS (10:00)"
   },
