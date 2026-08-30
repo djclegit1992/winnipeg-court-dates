@@ -1,6 +1,6 @@
 {
-  "run_id": "2026-08-30T0910",
-  "scraped_at": "2026-08-30T09:10:28.961821-05:00",
+  "run_id": "2026-08-30T0958",
+  "scraped_at": "2026-08-30T09:58:33.134437-05:00",
   "registry_last_updated_raw": "Aug 30 2026 4:03:28",
   "registry_last_updated": "2026-08-30T04:03:28-05:00",
   "location": "Winnipeg-KB",
@@ -740,16 +740,12 @@
       "code": "46  ",
       "hearing_type": "CIVIL CONTESTED MOTIONS",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=46%20%20&HearingTypeDesc=CIVIL%20CONTESTED%20MOTIONS",
-      "earliest_date": "10-Sep-2026",
-      "days_out": 11,
+      "earliest_date": "10-Dec-2026",
+      "days_out": 102,
       "slots_total": 5,
       "dates": [
         {
-          "date": "10-Sep-2026",
-          "time": "10:00"
-        },
-        {
-          "date": "23-Sep-2026",
+          "date": "10-Dec-2026",
           "time": "10:00"
         },
         {
@@ -761,7 +757,11 @@
           "time": "10:00"
         },
         {
-          "date": "10-Dec-2026",
+          "date": "10-Sep-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "23-Sep-2026",
           "time": "10:00"
         }
       ],
