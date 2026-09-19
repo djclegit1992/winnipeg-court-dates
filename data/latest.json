@@ -1,14 +1,21 @@
 {
-  "run_id": "2026-09-19T1510",
-  "scraped_at": "2026-09-19T15:10:19.063965-05:00",
+  "run_id": "2026-09-19T1728",
+  "scraped_at": "2026-09-19T17:28:15.427328-05:00",
   "registry_last_updated_raw": "Sep 19 2026 4:03:26",
   "registry_last_updated": "2026-09-19T04:03:26-05:00",
   "location": "Winnipeg-KB",
   "counts": {
     "NO_DATES": 7,
-    "OK": 34
+    "OK": 33,
+    "FETCH_FAILED": 1
   },
-  "unreadable": [],
+  "unreadable": [
+    {
+      "code": "18A ",
+      "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (1:30PM)",
+      "status": "FETCH_FAILED"
+    }
+  ],
   "results": [
     {
       "code": "67  ",
@@ -3262,48 +3269,11 @@
       "code": "18A ",
       "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (1:30PM)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=18A%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%201ST%20APP%20(1%3A30PM)%20",
-      "earliest_date": "02-Nov-2026",
-      "days_out": 44,
-      "slots_total": 9,
-      "dates": [
-        {
-          "date": "02-Nov-2026",
-          "time": "01:30"
-        },
-        {
-          "date": "07-Dec-2026",
-          "time": "01:30"
-        },
-        {
-          "date": "14-Dec-2026",
-          "time": "01:30"
-        },
-        {
-          "date": "04-Jan-2027",
-          "time": "01:30"
-        },
-        {
-          "date": "11-Jan-2027",
-          "time": "01:30"
-        },
-        {
-          "date": "18-Jan-2027",
-          "time": "01:30"
-        },
-        {
-          "date": "01-Feb-2027",
-          "time": "01:30"
-        },
-        {
-          "date": "08-Feb-2027",
-          "time": "01:30"
-        },
-        {
-          "date": "15-Mar-2027",
-          "time": "01:30"
-        }
-      ],
-      "status": "OK"
+      "earliest_date": null,
+      "days_out": null,
+      "slots_total": null,
+      "dates": [],
+      "status": "FETCH_FAILED"
     },
     {
       "code": "18C ",
