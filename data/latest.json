@@ -1,8 +1,8 @@
 {
-  "run_id": "2026-11-25T0039",
-  "scraped_at": "2026-11-25T00:39:34.799222-05:00",
-  "registry_last_updated_raw": "Nov 24 2026 4:04:07",
-  "registry_last_updated": "2026-11-24T04:04:07-05:00",
+  "run_id": "2026-11-25T0610",
+  "scraped_at": "2026-11-25T06:10:23.625298-05:00",
+  "registry_last_updated_raw": "Nov 25 2026 4:03:59",
+  "registry_last_updated": "2026-11-25T04:03:59-05:00",
   "location": "Winnipeg-KB",
   "counts": {
     "NO_DATES": 8,
@@ -1189,14 +1189,10 @@
       "code": "09  ",
       "hearing_type": "CRIMINAL BAILS (MON/THURS)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=09%20%20&HearingTypeDesc=CRIMINAL%20BAILS%20(MON%2FTHURS)",
-      "earliest_date": "26-Nov-2026",
-      "days_out": 1,
-      "slots_total": 104,
+      "earliest_date": "30-Nov-2026",
+      "days_out": 5,
+      "slots_total": 103,
       "dates": [
-        {
-          "date": "26-Nov-2026",
-          "time": "10:00"
-        },
         {
           "date": "30-Nov-2026",
           "time": "14:00"
@@ -1626,14 +1622,10 @@
       "code": "11  ",
       "hearing_type": "CRIMINAL UNCONTESTED MOTIONS(THURS-10:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=11%20%20&HearingTypeDesc=CRIMINAL%20UNCONTESTED%20MOTIONS(THURS-10%3A00)",
-      "earliest_date": "26-Nov-2026",
-      "days_out": 1,
-      "slots_total": 51,
+      "earliest_date": "03-Dec-2026",
+      "days_out": 8,
+      "slots_total": 50,
       "dates": [
-        {
-          "date": "26-Nov-2026",
-          "time": "10:00"
-        },
         {
           "date": "03-Dec-2026",
           "time": "10:00"
@@ -2681,14 +2673,10 @@
       "code": "01  ",
       "hearing_type": "FAMILY TRIAGE SCREENING LIST (TUES-9:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=01%20%20&HearingTypeDesc=FAMILY%20TRIAGE%20SCREENING%20LIST%20(TUES-9%3A00)",
-      "earliest_date": "01-Dec-2026",
-      "days_out": 6,
-      "slots_total": 16,
+      "earliest_date": "22-Dec-2026",
+      "days_out": 27,
+      "slots_total": 15,
       "dates": [
-        {
-          "date": "01-Dec-2026",
-          "time": "9:00"
-        },
         {
           "date": "22-Dec-2026",
           "time": "9:00"
@@ -2947,14 +2935,10 @@
       "code": "16C ",
       "hearing_type": "SMALL CLAIMS WINNIPEG - 1ST APP (9:00AM)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=16C%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%201ST%20APP%20%20(9%3A00AM)%20",
-      "earliest_date": "08-Mar-2027",
-      "days_out": 103,
-      "slots_total": 10,
+      "earliest_date": "15-Mar-2027",
+      "days_out": 110,
+      "slots_total": 9,
       "dates": [
-        {
-          "date": "08-Mar-2027",
-          "time": "09:00"
-        },
         {
           "date": "15-Mar-2027",
           "time": "09:00"
@@ -3090,7 +3074,7 @@
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=18C%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%201ST%20APP%20(1%3A30PM)%20",
       "earliest_date": "07-Dec-2026",
       "days_out": 12,
-      "slots_total": 10,
+      "slots_total": 9,
       "dates": [
         {
           "date": "07-Dec-2026",
@@ -3098,10 +3082,6 @@
         },
         {
           "date": "14-Dec-2026",
-          "time": "01:30"
-        },
-        {
-          "date": "08-Mar-2027",
           "time": "01:30"
         },
         {
@@ -3259,14 +3239,10 @@
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=11A%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%20CONTESTED%20(9%3A00AM)",
       "earliest_date": "15-Apr-2027",
       "days_out": 141,
-      "slots_total": 16,
+      "slots_total": 15,
       "dates": [
         {
           "date": "15-Apr-2027",
-          "time": "09:00"
-        },
-        {
-          "date": "20-Apr-2027",
           "time": "09:00"
         },
         {
@@ -3397,10 +3373,14 @@
       "code": "20A ",
       "hearing_type": "SMALL CLAIMS WINNIPEG - SET ASIDE (PM)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=20A%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%20SET%20ASIDE%20(PM)",
-      "earliest_date": "21-Dec-2026",
-      "days_out": 26,
-      "slots_total": 6,
+      "earliest_date": "30-Nov-2026",
+      "days_out": 5,
+      "slots_total": 7,
       "dates": [
+        {
+          "date": "30-Nov-2026",
+          "time": "01:30"
+        },
         {
           "date": "21-Dec-2026",
           "time": "01:30"
