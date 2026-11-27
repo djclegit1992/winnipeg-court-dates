@@ -1,8 +1,8 @@
 {
-  "run_id": "2026-11-27T0019",
-  "scraped_at": "2026-11-27T00:19:20.695071-05:00",
-  "registry_last_updated_raw": "Nov 26 2026 4:04:19",
-  "registry_last_updated": "2026-11-26T04:04:19-05:00",
+  "run_id": "2026-11-27T0610",
+  "scraped_at": "2026-11-27T06:10:22.701118-05:00",
+  "registry_last_updated_raw": "Nov 27 2026 4:04:48",
+  "registry_last_updated": "2026-11-27T04:04:48-05:00",
   "location": "Winnipeg-KB",
   "counts": {
     "NO_DATES": 8,
@@ -921,20 +921,20 @@
       "code": "40B ",
       "hearing_type": "BANKRUPTCY UNCONTESTED DISCHARGE (WED-2:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=40B%20&HearingTypeDesc=BANKRUPTCY%20UNCONTESTED%20DISCHARGE%20(WED-2%3A00)",
-      "earliest_date": "06-Jan-2027",
-      "days_out": 40,
+      "earliest_date": "02-Dec-2026",
+      "days_out": 5,
       "slots_total": 3,
       "dates": [
+        {
+          "date": "02-Dec-2026",
+          "time": "14:00"
+        },
         {
           "date": "06-Jan-2027",
           "time": "14:00"
         },
         {
           "date": "03-Feb-2027",
-          "time": "14:00"
-        },
-        {
-          "date": "02-Dec-2026",
           "time": "14:00"
         }
       ],
@@ -954,10 +954,26 @@
       "code": "02  ",
       "hearing_type": "CIVIL UNCONTESTED MOTIONS (10:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=02%20%20&HearingTypeDesc=CIVIL%20UNCONTESTED%20MOTIONS%20(10%3A00)",
-      "earliest_date": "07-Dec-2026",
-      "days_out": 10,
+      "earliest_date": "30-Nov-2026",
+      "days_out": 3,
       "slots_total": 52,
       "dates": [
+        {
+          "date": "30-Nov-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "01-Dec-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "02-Dec-2026",
+          "time": "10:00"
+        },
+        {
+          "date": "03-Dec-2026",
+          "time": "10:00"
+        },
         {
           "date": "07-Dec-2026",
           "time": "10:00"
@@ -1149,22 +1165,6 @@
         {
           "date": "26-Feb-2027",
           "time": "10:00"
-        },
-        {
-          "date": "30-Nov-2026",
-          "time": "10:00"
-        },
-        {
-          "date": "01-Dec-2026",
-          "time": "10:00"
-        },
-        {
-          "date": "02-Dec-2026",
-          "time": "10:00"
-        },
-        {
-          "date": "03-Dec-2026",
-          "time": "10:00"
         }
       ],
       "status": "OK"
@@ -1173,14 +1173,10 @@
       "code": "09  ",
       "hearing_type": "CRIMINAL BAILS (MON/THURS)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=09%20%20&HearingTypeDesc=CRIMINAL%20BAILS%20(MON%2FTHURS)",
-      "earliest_date": "30-Nov-2026",
-      "days_out": 3,
-      "slots_total": 103,
+      "earliest_date": "03-Dec-2026",
+      "days_out": 6,
+      "slots_total": 102,
       "dates": [
-        {
-          "date": "30-Nov-2026",
-          "time": "14:00"
-        },
         {
           "date": "03-Dec-2026",
           "time": "10:00"
@@ -1817,16 +1813,16 @@
       "code": "14  ",
       "hearing_type": "ESTREATAL LIST (10:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=14%20%20&HearingTypeDesc=ESTREATAL%20LIST%20(10%3A00)",
-      "earliest_date": "26-Jan-2027",
-      "days_out": 60,
+      "earliest_date": "15-Dec-2026",
+      "days_out": 18,
       "slots_total": 2,
       "dates": [
         {
-          "date": "26-Jan-2027",
+          "date": "15-Dec-2026",
           "time": "10:00"
         },
         {
-          "date": "15-Dec-2026",
+          "date": "26-Jan-2027",
           "time": "10:00"
         }
       ],
@@ -2649,10 +2645,14 @@
       "code": "01  ",
       "hearing_type": "FAMILY TRIAGE SCREENING LIST (TUES-9:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=01%20%20&HearingTypeDesc=FAMILY%20TRIAGE%20SCREENING%20LIST%20(TUES-9%3A00)",
-      "earliest_date": "22-Dec-2026",
-      "days_out": 25,
-      "slots_total": 15,
+      "earliest_date": "15-Dec-2026",
+      "days_out": 18,
+      "slots_total": 16,
       "dates": [
+        {
+          "date": "15-Dec-2026",
+          "time": "9:00"
+        },
         {
           "date": "22-Dec-2026",
           "time": "9:00"
@@ -2747,20 +2747,20 @@
       "code": "05B ",
       "hearing_type": "I.S.O. (TUE 2:00)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=05B%20&HearingTypeDesc=I.S.O.%20(TUE%202%3A00)",
-      "earliest_date": "12-Jan-2027",
-      "days_out": 46,
+      "earliest_date": "08-Dec-2026",
+      "days_out": 11,
       "slots_total": 3,
       "dates": [
+        {
+          "date": "08-Dec-2026",
+          "time": "14:00"
+        },
         {
           "date": "12-Jan-2027",
           "time": "14:00"
         },
         {
           "date": "09-Feb-2027",
-          "time": "14:00"
-        },
-        {
-          "date": "08-Dec-2026",
           "time": "14:00"
         }
       ],
@@ -3205,14 +3205,10 @@
       "code": "11A ",
       "hearing_type": "SMALL CLAIMS WINNIPEG - CONTESTED (9:00AM)",
       "url": "https://web43.gov.mb.ca/Registry/AvailableCourtDates/ShowCourtDates?LocationCode=01%20%20&LocationDesc=Winnipeg-KB&HearingTypeCode=11A%20&HearingTypeDesc=SMALL%20CLAIMS%20WINNIPEG%20-%20CONTESTED%20(9%3A00AM)",
-      "earliest_date": "15-Apr-2027",
-      "days_out": 139,
-      "slots_total": 16,
+      "earliest_date": "20-Apr-2027",
+      "days_out": 144,
+      "slots_total": 15,
       "dates": [
-        {
-          "date": "15-Apr-2027",
-          "time": "09:00"
-        },
         {
           "date": "20-Apr-2027",
           "time": "09:00"
